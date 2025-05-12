@@ -1,0 +1,19 @@
+*.vscode
+build
+*.exe
+*.dll
+*.pdb
+*.log
+*.obj
+monitor.log
+data
+# custom
+mcp
+release
+release.7z
+
+# thirdparty
+# monitor
+# drivers
+# main
+back
