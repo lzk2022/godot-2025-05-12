@@ -5,6 +5,8 @@ build
 *.pdb
 *.log
 *.obj
+*.lib
+*.pyc
 monitor.log
 data
 # custom
@@ -17,3 +19,4 @@ release.7z
 # drivers
 # main
 back
+SCsub*

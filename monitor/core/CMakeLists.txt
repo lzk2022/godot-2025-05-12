@@ -26,9 +26,34 @@ add_library(${LIB_NAME} STATIC
 
 # 链接 Windows API 所需的库
 target_link_libraries(${LIB_NAME} PRIVATE
+    clipper2
+    brotli
+    minizip
+    zlib
+    zstd
+    misc
 )
 
 # 包含头文件目录
 target_include_directories(${LIB_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/
+    ${macro_scons_thirdparty_include}/
+    ${macro_scons_thirdparty_include}/thirdparty/mbedtls/include
 )
+
+target_compile_definitions(${LIB_NAME} PUBLIC
+
+    # MBEDTLS_CONFIG_FILE
+    TOOLS_ENABLED
+    DEBUG_METHODS_ENABLED
+    TYPED_METHOD_BIND
+    DEBUG_ENABLED
+    THREADS_ENABLED
+    MINIZIP_ENABLED
+    MBEDTLS_CONFIG_FILE="thirdparty/mbedtls/include/godot_module_mbedtls_config.h"
+
+    # ANOTHER_MACRO="value"
+)
+
+# 定义任意一个
+# #if defined(DEBUG_ENABLED) || defined(DEV_ENABLED)
