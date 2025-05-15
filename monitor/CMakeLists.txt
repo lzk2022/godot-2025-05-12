@@ -68,3 +68,8 @@ add_subdirectory(${macro_scons_thirdparty_modules}/brotli ${CMAKE_BINARY_DIR}/br
 add_subdirectory(${macro_scons_thirdparty_modules}/minizip ${CMAKE_BINARY_DIR}/minizip)
 add_subdirectory(${macro_scons_thirdparty_modules}/zlib ${CMAKE_BINARY_DIR}/zlib)
 add_subdirectory(${macro_scons_thirdparty_modules}/zstd ${CMAKE_BINARY_DIR}/zstd)
+
+# servers
+add_subdirectory(servers)
+add_subdirectory(${macro_scons_thirdparty_modules}/amd-fsr2 ${CMAKE_BINARY_DIR}/amd-fsr2)
+add_subdirectory(${macro_scons_thirdparty_modules}/spirv-reflect ${CMAKE_BINARY_DIR}/spirv-reflect)

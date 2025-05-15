@@ -26,6 +26,9 @@ add_library(${LIB_NAME} STATIC
 
 # 链接 Windows API 所需的库
 target_link_libraries(${LIB_NAME} PRIVATE
+    core
+    amd-fsr2
+    spirv-reflect
 )
 
 # 包含头文件目录
